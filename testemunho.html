@@ -1,0 +1,382 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YEHOSHUA TV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #eee;
+      min-height: 100vh;
+      position: relative;
+      padding-top: 140px; /* espaço para header fixo */
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: rgba(76, 127, 175, 0.85);
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header img {
+      max-width: 120px;
+      margin-bottom: 10px;
+      z-index: 1;
+    }
+ header h1 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      z-index: 1;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      z-index: 1;
+    }
+
+    header nav a:hover {
+      background-color: #3573c9;
+      z-index: 1;
+    }
+/* Seção de produtos */
+.product-promotion{
+    width: 100%;
+    height: 300px;
+    padding: 10px 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2rem;
+    color: #127214;
+}
+
+.recent-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 5%;
+    margin-bottom: 50px;
+}
+
+.product-promotion-card {
+    flex: 60%;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-promotion-card img{
+    width: 100%;
+    height: 100%;
+}
+.product-promotion-card:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.product-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-promotion-info {
+    padding: 20px;
+    flex: 40%;
+}
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #1a521db9;
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid #1a521db9;
+    color: #1a521db9;
+}
+
+.btn-outline:hover {
+    background: #127214;
+    color: white;
+}
+
+/* Sliders de produtos */
+.product-slider {
+    margin: 50px 0;
+    padding: 0 5%;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+.see-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 300px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #3498db;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 1.2rem;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="reels ACÇÃO SOCIAL.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <header>
+    <img src="LOGO BRANCO.png" alt="Logo" />
+    <h1>TESTEMUNHOS MOMENTS.</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="ABOUT.html" target="_blank">Sobre nós</a>
+      <a href="partner2.html">Marcações</a>
+    </nav>
+  </header>
+ <main>
+       
+
+
+</div>
+    <!-- Produtos recentes -->
+    <h2 class="section-title"></h2>
+    <h2 class="section-title"></h2>
+   
+    <div class="recent-products">
+        <div class="product-card">
+            <img src="DAD (3).jpg" alt="Casa moderna" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">O MEU TESTEMUNHO</h3>
+                <p class="product-description">🔥Profeta João Cabeia.
+Filiação:
+Filho de João Cabeya e de Ana Maria Capinga.
+Natural de Luanda.
+Nascido aos 18 de Maio.
+Casado com a Victória Cabeia.
+Sua mãe por anos de esterilidade sendo Humilhada pelos familiares e mais chegados porque depois de ser casada não concebia, ela buscava somente a face de Deus para um dia alcançar. 
+Foi assim que em meia turbulências, passou a conhecer o poder da oração. 
+Concebida então, começaram novamente os ataques e insultos familiares que por vezes apertavam sua barriga pensando que ela mentia.
+Foi quase impossível o nascimento do menino que ultrapassou os 9 meses no ventre... </p>
+                <div class="product-price">O testemunho é uma evidência!</div>
+                <div class="product-actions">
+                    <a href="https://www.facebook.com/100067583382025/posts/pfbid02q6qFe8wY1UnMZvKqqNEFg8dMXBoex8BpppMu2zUM8eGJvjTinVEdwJdREHwgY5yNl/?app=fbl">  <button class="btn btn-small btn-outline">Ver mais</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20250728-WA0137(1).jpg" alt="Casa moderna" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">LIVRE DO MIOMA DE 17 QUILOS</h3>
+                <p class="product-description">Tremendo Extraordinário 🔥Mariana Caetano Benjamin, no ano de 2012 passou a sentir dores fortes na barriga.Em novembro de 2014 ela voltou a ter os mesmos sintomas, a dor era tão forte, recorreu então a uma maternidade acompanhada do seu Pai.Em 2020 as coisas pioraram, o seu ventre inflamou, as dores eram constantes e ela já não conseguia fazer alguma coisa.Em novembro de 2022, ela se encontrou com sua irmã que lhe indicou a Antioquia Igreja de todas as nações.Chegando o homem de Deus Profeta João Cabeia, lhe localizou debaixo da influência do Espírito Santo dizendo:“Há uma tartaruga que colocaram no teu ventre em forma de carne”. Recebeu o toque do homem de Deus e hoje ela está curada para a Glória de Deus.</p>
+                <div class="product-price">Jesus está Vivo!</div>
+                <div class="product-actions">
+                     <a href="https://www.facebook.com/100067583382025/posts/pfbid02q6qFe8wY1UnMZvKqqNEFg8dMXBoex8BpppMu2zUM8eGJvjTinVEdwJdREHwgY5yNl/?app=fbl">  <button class="btn btn-small btn-outline">Ver mais</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20250728-WA0133.jpg" alt="Casa moderna" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">CASAL LIVRE DO HIV SIDA</h3>
+                <p class="product-description">Testemunho que escandaliza a nossa fé😭
+Testemunho do casal que há 8 anos padecia de uma doença que para os homens e os médicos era impossível a sua cura (HIV Sida). este casal veio até a AITN na Sede do Lubango, tristonhos cabesbaixos e preocupados com o estado de sua saúde e sa sua casa, após participerem no culto e receberem o toque da mão Divina através do Homem de Deus Profeta João Cabeia, e tão logo o homem de Deus os mandou até ao hospital para assim pois fazerem novos testes e sucedeu que eles voltaram para testemunhar porque os testes que foram fazer assim como o homem de Deus orientou deram negativos para glória de Deus, com todos comprovativos médicos no altar de forma feliz e totalmente emocionante o casal se alegra pela mão de Deus.
+Jesus Cristo curou esta família!</p>
+                 <a href="https://www.facebook.com/joaocabeiaministries/videos/738627155391496/?app=fbl">  <button class="btn btn-small btn-outline">Ver mais</button></a>
+                <div class="product-actions">
+            
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="IMG-20250728-WA0132.jpg" alt="Casa moderna" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">BEBÊ QUE NASCEU MORTO RESSUSCITA</h3>
+                <p class="product-description">Testemunho extraordinário🔥🔥🔥
+Bebé nasceu morto e Ressuscitou pelo poder do nome de Jesus Cristo.
+
+Uma mulher que nasceu numa família com maldição, depois de tanto retrocesso e estagnação recebe o convite para visitar a Antioquia Igreja de Todas as Nações.
+Tendo ela passado duas vezes em abortos e todas as suas gestações eram submetidas a cirurgias, e debaixo da maldição familiar nenhuma mulher pode nascer um filho do sexo masculino.
+Enquanto o homem de Deus orava na igreja, foi levado pelo Espírito Santo a revelar a situação dela e destruiu a maldição no poderoso nome de Jesus Cristo.
+O homem de Deus profetizou o sexo do bebé e chamou-lhe de "Emmanuel".
+Houve muitas lutas no período da gestação que até os médicos não aceitavam recebe-la no momento da dor para o parto.
+Voltando ela em casa, sentiu uma força que levou-lhe a expulsar o bebé, e pela primeira vez na sua vida nasceu sem cirurgia.
+Mas infelizmente o bebé nasceu morto...
+</p>
+                <div class="product-price">A graça está disponível!</div>
+                <div class="product-actions">
+<a href="https://www.facebook.com/share/v/16rRzRCsYM/">  <button class="btn btn-small btn-outline">Ver mais</button></a>
+                </div>
+            </div>
+    </div>
+  </main>
+
+  <footer>&copy; PJC.
+</footer>
+ <script>
+ const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides.forEach((slide) => {
+    slide.classList.remove('active');
+  });
+  slides[n].classList.add('active');
+}
+
+prevButton.addEventListener('click', () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  }
+  showSlide(currentSlide);
+});
+
+nextButton.addEventListener('click', () => {
+  currentSlide++;
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+  showSlide(currentSlide);
+});
+
+showSlide(currentSlide);
+ </script>
+ 
+</script>
+
+

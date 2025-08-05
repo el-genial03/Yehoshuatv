@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Marcação Religiosa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-image: url('LOGO BRANCO.png');
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(100, 181, 246, 0.8);
+      background-blend-mode: overlay;
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column; /* Alterado para column */
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; /* Largura total */
+      padding: 20px;
+      box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    }
+
+    .logo {
+      width: 100px; /* Ajuste o tamanho conforme necessário */
+      order: 1; /* Move o logo para a direita */
+    }
+
+    .neon-title {
+      font-size: 2em;
+      color: #fff;
+      text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px rgb(1, 75, 160),
+        0 0 30px rgb(255, 224, 216),
+        0 0 40px rgb(0, 174, 255),
+        0 0 50px #0ff,
+        0 0 60px rgb(1, 75, 160);
+      order: 2; /* Move o título para o centro */
+      margin-left: auto;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      margin-top: 20px; /* Adiciona espaço acima do formulário */
+    }
+    .quote-text {
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #c96e07;
+  margin: 20px auto;
+  padding: 10px 15px;
+  max-width: 90%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.quote-text strong {
+  color: #ff6600;
+  font-weight: 600;
+}
+
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #64B5F6;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4285F4;
+    }
+
+    .social {
+      text-align: center;
+      margin: 20px 0; /* Reduz a margem */
+    }
+
+    .social a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 2em;
+      transition: transform 0.3s;
+    }
+
+    .social a:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(17, 17, 17, 0.8);
+      color: #ccc;
+      margin-top: auto; /* Empurra o footer para baixo */
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div></div>
+    <h1 class="neon-title">MARCAÇÕES</h1>
+    
+    <img src="AZUL.png" alt="Logotipo" class="logo">
+  </div>
+  <div class="quote-text"> <a href="https://www.facebook.com/100093072703176/videos/1051245226780904/?app=fbl">     POR QUE SER UM PARCEIRO? </a></div>
+  <div class="container">
+    <h1>Faça a sua Marcação ou seja um parceiro!</h1>
+    <div><a href="teste.HTML">CRIAR HOSPEDAGEM </a></div>
+ 
+    <form action="https://formspree.io/f/mjkoagdo" method="POST">
+      <input type="text" name="nome" placeholder="Escreva aqui seus dados pessoais">
+      <input type="email" name="_replyto" placeholder="Email">
+      <input type="tel" name="telefone" placeholder="Telefone">
+      <input type="text" name="motivo" placeholder="Motivo da Marcação">
+      <textarea name="pedido" placeholder="Pedido de Oração"></textarea>
+      <input type="submit" value="Enviar Pedido">
+    </form>
+  
+  <img src="" alt="" width="20">
+<footer style="margin-top: auto; text-align: center;">
+  <div class="social">
+    <a href="https://www.facebook.com/joaocabeiaministries">
+      <img src="facebook-770688_640.png" alt="Facebook Logo" width="30">
+    </a>
+    <a href="https://www.instagram.com/cabeia_oficial/?utm_source=ig_web_button_share_sheet">
+      <img src="colored+gradient+instagram+media+social+social+media+icon-1320192520147384507.png" alt="Instagram Logo" width="30">
+    </a>
+    <a href="https://youtube.com/@yehoshua_tv?si=c_cvHZz0GeIPnmFU">
+      <img src="YT.jpg" alt="YouTube Logo" width="30">
+    </a>
+    <a href="https://www.tiktok.com/@prophetcabeia?_t=ZM-8ybD3WItO0m&_r=1">
+      <img src="tiktok.jpg" alt="YouTube Logo" width="30">
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,328 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   position: relative; /* Para posicionar o texto sobre o vídeo */
+}
+header {
+    background-color: rgba(76, 127, 175, 0.7); /* Fundo verde com transparência */
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Z-index para sobrepor o vídeo */
+}
+header img {
+    max-width: 150px;
+    margin: 10px 0;
+}
+nav {
+    margin: 20px 0;
+}
+nav a {
+    margin: 0 auto;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.content { 
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 33, 180);
+    position: relative;
+    z-index: 1; /* Z-index para sobrepor o vídeo */
+    
+    
+
+    }
+
+footer {
+    text-align: center;
+    padding: 16px 0;
+    background-color: rgba(51, 51, 51, 0.9); /* Rodapé com transparência */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; /* Z-index para sobrepor o vídeo */
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 485px;
+    z-index: 0; /* Colocar o vídeo atrás de outros elementos */
+    overflow: hidden;
+    
+}
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Para cobrir todo o fundo */
+}
+.btn{
+
+background-color: rgba(34, 34, 34, 0.9);
+color: white;
+padding: 5px 15px;
+border-radius: 10px;
+cursor: pointer;
+display: inline-block;
+transition: 0.3s; 
+}
+.btn:hover{
+background-color: #3586db;
+}
+.container{
+color: black;
+}
+
+  a:hover span {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  body {
+     
+    
+      background: linear-gradient(45deg, #d1971a, #1e77dd);
+      animation: gradient 10s ease infinite;
+      color: #fff;
+    
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+     text-shadow: 0 0 10px #f0f0f0;
+     
+    position: relative; /* Para conter o vídeo fixo */
+    z-index: 1;
+
+    }
+    .quebra-folha {
+    height: 20px; /* Altura do quebra-folha */
+    width: 100%;
+    background: transparent; /* Fundo transparente */
+}
+
+
+.content {
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 33, 180);
+    position: relative;
+    z-index: 1;
+    
+}
+.quote-text {
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #c96e07;
+  margin: 20px auto;
+  padding: 10px 15px;
+  max-width: 90%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.quote-text strong {
+  color: #ff6600;
+  font-weight: 600;
+}
+
+/* Seção de produtos */
+.product-promotion{
+    width: 100%;
+    height: 300px;
+    padding: 10px 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 2rem;
+    color: #127214;
+}
+
+.recent-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 5%;
+    margin-bottom: 50px;
+}
+
+.product-promotion-card {
+    flex: 60%;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-promotion-card img{
+    width: 100%;
+    height: 100%;
+}
+.product-promotion-card:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.product-card {
+   background: linear-gradient(45deg, #ffffff, #90c0f0);
+      animation: gradient 10s ease infinite;
+      color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.product-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;  
+}
+
+.product-promotion-info {
+    padding: 20px;
+    flex: 40%;
+}
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #31465a;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #0e02adb9;
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid #1a521db9;
+    color: #1a521db9;
+}
+
+.btn-outline:hover {
+    background: #127214;
+    color: white;
+}
+
+/* Sliders de produtos */
+.product-slider {
+    margin: 50px 0;
+    padding: 0 5%;
+}
+
+.slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.slider-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+.see-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 300px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #3498db;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 1.2rem;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.social a img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+
+.social a img:hover {
+  transform: scale(1.2);
+}
